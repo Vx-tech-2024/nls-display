@@ -1,0 +1,7 @@
+const customerRatings = [
+  '../assets/ratings/rating1.png',
+ '../assets/ratings/rating2.png',
+ '../assets/ratings/rating3.png',
+ '../assets/ratings/rating4.png'
+];
+export default customerRatings;
