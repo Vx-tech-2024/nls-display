@@ -1,9 +1,10 @@
 import { image } from "framer-motion/client";
+import spotlightpic from '../assets/milestones/milestone 4.jpg';
 
 const teamSpotlight = {
-    image: "../assets/milestones/milestone 4.jpg",
+    image: spotlightpic,
     name: "Alphonse",
-    department: "Mobile Development",
+    department: "Implementation",
     funFact: "NLS Zimbabwe ambassador",
 
 };

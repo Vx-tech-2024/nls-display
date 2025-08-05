@@ -1,15 +1,10 @@
 const projects = {
-  lastWeek: [
-    'Project A',
-    'Project B',
-    'Project C'
+  lastmonth: [
+    'Sidian T24 Upgrade',
+    'Terafin Upgrade'
   ],
-  thisWeek: [
-    'Project A',
-    'Project B',
-    'Project C',
-    'Project D',
-    'Project E'
+  thismonth: [
+    'Tembo sacco app ios and Android'
   ]
 };
 

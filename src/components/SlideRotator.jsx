@@ -9,9 +9,8 @@ import TeamSpotlightSlide from './TeamSpotlightSlide';
 import SpecialDatesSlide from './SpecialDatesSlide';
 import MiniAwardsSlide from './MiniAwardsSlide';
 import TechTipSlide from './TechTipSlide';
-import PolicyRemindersSlide from './PolicyRemindersSlide';
 import MotivationalQuoteSlide from './MotivationalQuoteSlide';
-import HRAnnouncementsSlide from './HRAnnouncementsSlide';
+import HRPolicySlide from './HRPolicySlide';
 import UpcomingEventsSlide from './UpcomingeventsSlide';
 import GameWinnersSlide from './GameWinnersSlide';
 import MDMessageSlide from './MDMessageSlide';
@@ -31,7 +30,7 @@ import motivationalQuote from '../data/motivationalQuote';
 import policyTip from '../data/policyTip';
 import specialDates from '../data/specialDates';
 import upcomingEvents from '../data/upcomingEvents';
-import customerRatings from '../data/customerRatings';
+import customerRatings from '../data/customerRatings.js';
 import SlideLayout from './SlideLayout';
 
 function hasSpecialDatesToday() {
@@ -45,9 +44,44 @@ function hasSpecialDatesToday() {
 function shouldShowTeamSpotlight() {
   const today = new Date();
   const day = today.getDay(); 
-  return (day === 4 || day === 5) && teamSpotlight && teamSpotlight.name;
+  return (day === 2 || day === 5) && teamSpotlight && teamSpotlight.name;
 }
 
+function shouldShowNewHires() {
+  const now = new Date();
+
+  return newHires.some((hire) => {
+    if (!hire.startDate) return false;
+    const start = new Date(hire.startDate);
+    const diffDays = (now - start) / (1000 * 60 * 60 * 24);
+    return diffDays >= 0 && diffDays <= 15;
+  })
+}
+
+function shouldShowMiniAwards() {
+  const today = new Date();
+  const toMidnight = (date) => {
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  };
+  const isThisWeek = (dateStr) => {
+    const date = toMidnight(new Date(dateStr));
+    const todayMidnight = toMidnight(today);
+
+    const dayOfWeek = todayMidnight.getDay();
+    const startOfWeek = new Date(todayMidnight);
+    startOfWeek.setDate(todayMidnight.getDate() - dayOfWeek + 1);
+    const endOfWeek = new Date(startOfWeek);
+    endOfWeek.setDate(startOfWeek.getDate() + 6);
+
+    return date >= startOfWeek && date <= endOfWeek;
+  };
+  return miniAwards.some((award) => isThisWeek(award.awardDate));
+}
+
+function shouldShowUpcomingEvents() {
+  const today = new Date();
+  return upcomingEvents.some(event => new Date(event.date) >= today);
+}
 function SlideRotator() {
   const slides = useMemo(() => {
     const activeSlides = [];
@@ -59,7 +93,7 @@ function SlideRotator() {
     activeSlides.push(<CustomerRatings key="customerRatings" />);
     activeSlides.push(<EmployeeOfTheMonth key="employeeOfTheMonth" />);
 
-    if (newHires && newHires.length > 0) {
+    if (shouldShowNewHires()) {
       activeSlides.push(<NewHiresSlide key="newHires" />);
     }
 
@@ -71,7 +105,7 @@ function SlideRotator() {
       activeSlides.push(<SpecialDatesSlide key="specialDates" />);
     }
 
-    if (miniAwards && miniAwards.length > 0) {
+    if (shouldShowMiniAwards()) {
       activeSlides.push(<MiniAwardsSlide key="miniAwards" />);
     }
 
@@ -79,11 +113,13 @@ function SlideRotator() {
       activeSlides.push(<TechTipSlide key="techTips" />);
     }
 
-    activeSlides.push(<MDMessageSlide key="md-message" />);
-    activeSlides.push(<PolicyRemindersSlide key="policy" />);
+    //activeSlides.push(<MDMessageSlide key="md-message" />);
     activeSlides.push(<MotivationalQuoteSlide key="quote" />);
-    activeSlides.push(<HRAnnouncementsSlide key="hr" />);
-    activeSlides.push(<UpcomingEventsSlide key="events" />);
+    activeSlides.push(<HRPolicySlide key="hr" />);
+
+    if (shouldShowUpcomingEvents()) {
+      activeSlides.push(<UpcomingEventsSlide key="events" />);
+    }
 
     if (gameWinners && gameWinners.length > 0) {
       activeSlides.push(<GameWinnersSlide key="games" />);
@@ -99,7 +135,7 @@ function SlideRotator() {
 
     const interval = setInterval(() => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % slides.length);
-    }, 45000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [slides]);

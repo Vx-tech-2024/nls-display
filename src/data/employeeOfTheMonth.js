@@ -1,8 +1,9 @@
+import employeephoto from '../assets/images/Meshack Kibunja.jpg';
 const employeeOfTheMonth = {
-    name: "Everline ",
-    photo:"/assets/images/Everline.jpg",
-    role:"Customer Support",
-    description:"Here goes the reason",
+    name: "Meshack Kibunja",
+    photo: employeephoto,
+    role:"Implementation",
+    description:"Worked for over three weekends till Go-Live on the Sidian T24 and Terafin Upgrade Project."
    
 }
 
