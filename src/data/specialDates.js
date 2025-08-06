@@ -1,7 +1,7 @@
 import birthaday1 from '../assets/images/Shaaban.jpg';
 import birthday2 from '../assets/images/Mwangi Ndereba.jpg';
 import anniversary1 from '../assets/images/Shaaban.jpg';
-import anniversary2 from '../assets/images/Gilbert 2.jpg';
+import anniversary2 from '../assets/images/Gilbert2.jpg';
 import anniversary3 from '../assets/images//Everline.jpg';
 
 
