@@ -3,7 +3,7 @@ const employeeOfTheMonth = {
     name: "Meshack Kibunja",
     photo: employeephoto,
     role:"Implementation",
-    description:"Worked for over three weekends till Go-Live on the Sidian T24 and Terafin Upgrade Project."
+    description:"Worked for over 72 hours till Go-Live on the Sidian T24 and Terafin Upgrade Project."
    
 }
 
