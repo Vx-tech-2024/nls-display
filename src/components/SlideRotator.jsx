@@ -135,7 +135,7 @@ function SlideRotator() {
 
     const interval = setInterval(() => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % slides.length);
-    }, 5000);
+    }, 50000);
 
     return () => clearInterval(interval);
   }, [slides]);
