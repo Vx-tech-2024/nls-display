@@ -9,7 +9,6 @@ import SlideLayout from './components/SlideLayout.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <SlideLayout/>
   </StrictMode>,
 )
  
