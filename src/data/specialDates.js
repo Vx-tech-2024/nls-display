@@ -12,7 +12,7 @@ const specialDates = {
       photo: birthaday1,
       department: "Implementation",
       message: "Wishing you a day filled with joy and success!",
-      date: "2025-08-09"
+      date: "2025-08-07"
     },
     {
       name: "Mwangi Ndereba",
