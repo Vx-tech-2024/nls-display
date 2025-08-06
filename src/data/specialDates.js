@@ -19,7 +19,7 @@ const specialDates = {
       photo: birthday2,
       department: "Sales and Business Marketing Development",
       message: "Happy Birthday Mwangi! Keep shining 🎉",
-      date: "2025-08-07"
+      date: "2025-08-09"
     }
   ],
   anniversariesToday: [
@@ -35,8 +35,8 @@ const specialDates = {
       name:"Gilbert Kiarie",
       photo: anniversary2,
       department: "Implementation",
-      yearsAtNLS: 9,
-      message: "9 years of excellence and impact at NLS. Congratulations!!",
+      yearsAtNLS: 12,
+      message: "12 years of excellence and impact at NLS. Congratulations!!",
       date:"2025-08-08"
     },
     {
@@ -44,7 +44,7 @@ const specialDates = {
       photo: anniversary3,
       department: "Customer Support",
       yearsAtNLS: 9,
-      message:"9 years of excellence and impact at NLS. Congratulations!!1",
+      message:"9 years of excellence and impact at NLS. Congratulations!!",
       date: "2025-08-08"
     }
   ]
