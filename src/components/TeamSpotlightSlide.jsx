@@ -6,7 +6,7 @@ function TeamSpotlightSlide() {
     const today = new Date();
     const day = today.getDay();
 
-    if (day !== 2 && day !== 5) return null;
+    if (day !== 4 && day !== 5) return null;
 
     return (
 

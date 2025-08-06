@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const BackgroundRotator = ({ images = [], interval = 8000, opacity = 0.8, transitionDuration = 3 }) => {
+const BackgroundRotator = ({ images = [], interval = 9000, opacity = 0.8, transitionDuration = 3 }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {

@@ -44,7 +44,7 @@ function hasSpecialDatesToday() {
 function shouldShowTeamSpotlight() {
   const today = new Date();
   const day = today.getDay(); 
-  return (day === 2 || day === 5) && teamSpotlight && teamSpotlight.name;
+  return (day === 4 || day === 5) && teamSpotlight && teamSpotlight.name;
 }
 
 function shouldShowNewHires() {

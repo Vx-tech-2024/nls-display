@@ -32,7 +32,7 @@ const Milestones = () => {
 
       <div className="relative w-4/5 h-screen overflow-hidden bg-white">
 
-        <BackgroundRotator images={backgroundImages} interval={8000} opacity={0.8} />
+        <BackgroundRotator images={backgroundImages} interval={9000} opacity={0.8} />
 
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
           <motion.h1
