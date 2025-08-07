@@ -5,8 +5,8 @@ function LogoSlide() {
     return (
 
             <div className="flex flex-col items-center justify-center gap-4 ">
-                <img src= {logos} alt="nls logo" />
-                <p className="text-4xl text-center uppercase text-blue-700 font-serif">
+                <img src= {logos} alt="nls logo" className="w-screen" />
+                <p className="text-5xl text-center uppercase text-blue-800 font-serif">
                     TECH WITH PURPOSE, INNOVATION WITH IMPACT.
                 </p>
             </div>

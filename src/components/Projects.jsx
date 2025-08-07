@@ -13,20 +13,20 @@ function Projects() {
           📊 Completed Projects Last Month and This Month 
         </h2>
 
-        <table className="table-auto border-collapse w-full max-w-4xl text-2xl text-left shadow-xl">
+        <table className="table-auto border-collapse w-full max-w-6xl text-2xl text-left shadow-xl">
           <thead>
             <tr className="bg-gray-200">
-              <th className="border px-6 py-4 text-center">Last Month ({lastMonthProjects.length})</th>
-              <th className="border px-6 py-4 text-center">This Month ({thisMonthProjects.length})</th>
+              <th className="border px-6 py-4 text-center text-4xl">Last Month ({lastMonthProjects.length})</th>
+              <th className="border px-6 py-4 text-center text-4xl">This Month ({thisMonthProjects.length})</th>
             </tr>
           </thead>
           <tbody>
             {Array.from({ length: Math.max(lastMonthProjects.length, thisMonthProjects.length) }).map((_, index) => (
               <tr key={index} className="even:bg-gray-100">
-                <td className="border px-6 py-4">
+                <td className="border px-6 py-4 text-4xl text-bold ">
                   {lastMonthProjects[index] || " "}
                 </td>
-                <td className="border px-6 py-4">
+                <td className="border px-6 py-4 text-4xl text-bold">
                   {thisMonthProjects[index] || " "}
                 </td>
               </tr>

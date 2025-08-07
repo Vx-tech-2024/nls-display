@@ -10,21 +10,21 @@ const MotivationalQuoteSlide = () => {
     return (
 
         <motion.div
-        className="bg-white shadow-lg rounded-2xl p-16 mx-auto max-w-4xl text-center flex flex-col items-center justify-center gap-12 h-screen"
+        className="bg-white shadow-lg rounded-2xl p-16 mx-auto max-w-8xl text-center flex flex-col items-center justify-center gap-10 h-screen"
         initial = {{ opacity: 0, scale: 0.95 }}
         animate = {{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.1 }}
         >
 
             <div className="text-yellow-500">
-                <Sparkles size={80} />
+                <Sparkles size={150} />
             </div>
 
-            <blockquote className="text-4xl font-semibold text-black italic animate-fade-in-up delay-250">
+            <blockquote className="text-6xl font-semibold text-black italic animate-fade-in-up delay-250">
                 "{quote}"
             </blockquote>
 
-            <p className="text-2xl text-black">— {author}</p>
+            <p className="text-4xl text-black">— {author}</p>
 
             <p className="text-lg text-black mt-4">
                 Posted on {new Date(date).toLocaleDateString("en-KE", {

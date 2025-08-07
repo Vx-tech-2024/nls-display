@@ -40,7 +40,7 @@ function GameWinnersSlide() {
 
     return (
 
-            <div className="h-full w-full flex flex-col items-center justify-center space-y-16 px-8">
+            <div className="h-full w-full flex flex-col items-center justify-center space-y-16 px-4">
                 <h2 className="text-5xl font-bold uppercase text-center">🏆Game Winners🏆 </h2>
 
                 <div className="relative w-full max-w-7xl h-[400px] overflow-hidden">

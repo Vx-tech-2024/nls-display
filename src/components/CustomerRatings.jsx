@@ -23,11 +23,11 @@ const CustomerRatings = ({ interval = 10000, transitionDuration = 1.5 }) => {
 
   return (
     <div className="flex flex-col w-full h-full items-center justify-center space-y-2 px-2">
-      <div className="text-3xl font-bold text-gray-950 text-center">
+      <div className="text-8xl font-bold text-gray-950 text-center">
         Customer Feedback
       </div>
 
-      <div className="w-5/6 max-w-2xl h-5/6 relative overflow-hidden rounded-lg shadow-lg">
+      <div className="min-w-full max-w-2xl h-5/6 relative overflow-hidden rounded-lg shadow-lg">
         <AnimatePresence mode="wait">
           <motion.img
             key={customerRatings[currentIndex]}

@@ -10,24 +10,24 @@ const TechTipSlide = () => {
 
     return (
 
-        <div className="flex items-center justify-center min-h-screen bg-white">
+        <div className="flex items-center justify-center min-h-screen  bg-white">
             <motion.div
-                className="bg-white shadow-lg rounded-2xl p-8 max-w-2xl text-center flex flex-col items-center gap-6"
+                className="bg-white shadow-lg rounded-3xl p-8 max-w-2xl text-center flex flex-col items-center gap-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
             >
-                <span className="bg-yellow-100 text-yellow-800 text-5xl font-semibold px-3 py-1 rounded-full uppercase tracking-wide">
+                <span className="bg-yellow-100 text-yellow-800 text-6xl font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                     Tip of the Week
                 </span>
 
                 <div className="text-yellow-500">
-                    <Lightbulb size={60} />
+                    <Lightbulb size={150} />
                 </div>
 
                 <h2 className="text-4xl font-bold text-black">{title}</h2>
 
-                <p className="text-black text-2xl">{description}</p>
+                <p className="text-black text-3xl font-serif">{description}</p>
 
                 <div className="text-sm text-black mt-2">
                     Posted by <span className="font-medium text-gray-500">{author}</span> on{" "}

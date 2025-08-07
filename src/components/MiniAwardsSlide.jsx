@@ -26,7 +26,7 @@ function MiniAwardsSlide() {
 
     return (
 
-            <div className="text-center space-y-10">
+            <div className="text-center space-y-10 w-screen ">
                 <h2 className="text-5xl font-bold">Mini Awards of the Week🏆 </h2>
                 <div className="space-y-8">
                     {awardsToShow.map((award, idx) => (
@@ -34,10 +34,10 @@ function MiniAwardsSlide() {
                         key={idx}
                         className="bg-yellow-50 border border-yellow-300 rounded-2xl p-8 max-w-2xl mx-auto shadow-lg"
                         >
-                            <p className="text-3xl font-bold text-yellow-800">{award.title}</p>
-                            <p className="text-2xl font-semibold text-gray-600">{award.recipient}</p>
-                            <p className="text-xl text-gray-600">{award.department}</p>
-                            <p className="italic text-lg mt-2 text-gray-600">{award.reason}</p>
+                            <p className="text-4xl font-bold text-yellow-800">{award.title}</p>
+                            <p className="text-3xl font-semibold text-gray-600">{award.recipient}</p>
+                            <p className="text-3xl text-gray-900">{award.department}</p>
+                            <p className="text-3xl italic mt-2 text-gray-800">{award.reason}</p>
                         </div>
                     ))}
                 </div>

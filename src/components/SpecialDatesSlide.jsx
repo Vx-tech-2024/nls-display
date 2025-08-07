@@ -14,16 +14,16 @@ function SpecialDatesSlide() {
   if (!hasBirthdays && !hasAnniversaries) return null;
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full px-4 py-6 space-y-6">
-      <h2 className="text-4xl font-bold text-center">
+    <div className="flex flex-col items-center justify-center w-full h-full px-4 py-4 space-y-3">
+      <h2 className="text-6xl font-bold text-center">
         Special Moments Today at NLS 🎉
       </h2>
 
-      <div className="flex flex-col md:flex-row justify-center gap-8 w-full max-w-6xl">
+      <div className="flex flex-col md:flex-row justify-center gap-4 w-full max-w-7xl">
 
         {hasAnniversaries && (
           <div className="flex-1 space-y-4">
-            <h3 className="text-2xl font-semibold text-blue-600 text-center">
+            <h3 className="text-5xl font-semibold text-blue-600 text-center">
               🎊 Work Anniversaries
             </h3>
             {anniversariesToday.map((person, index) => (
@@ -37,9 +37,9 @@ function SpecialDatesSlide() {
                   className="w-16 h-16 rounded-full object-cover"
                 />
                 <div>
-                  <p className="text-lg font-semibold text-black">{person.name}</p>
-                  <p className="text-sm text-black">{person.department}</p>
-                  <p className="text-base italic mt-1 text-black">
+                  <p className="text-3xl font-semibold text-black">{person.name}</p>
+                  <p className="text-2xl text-black">{person.department}</p>
+                  <p className="text-xl italic mt-1 text-black">
                     {person.yearsAtNLS} {person.yearsAtNLS === 1 ? "year" : "years"} at NLS —{" "}
                     {person.message}
                   </p>
@@ -51,7 +51,7 @@ function SpecialDatesSlide() {
 
         {hasBirthdays && (
           <div className="flex-1 space-y-4">
-            <h3 className="text-3xl font-semibold text-pink-600 text-center">
+            <h3 className="text-5xl font-semibold text-pink-600 text-center">
               🎂 Birthdays
             </h3>
             {birthdaysToday.map((person, index) => (
@@ -65,9 +65,9 @@ function SpecialDatesSlide() {
                   className="w-16 h-16 rounded-full object-cover"
                 />
                 <div>
-                  <p className="text-lg font-semibold text-black">{person.name}</p>
-                  <p className="text-sm text-black">{person.department}</p>
-                  <p className="text-base italic mt-1 text-black">{person.message}</p>
+                  <p className="text-3xl font-semibold text-black">{person.name}</p>
+                  <p className="text-2xl text-black">{person.department}</p>
+                  <p className="text-2xl italic mt-1 text-black">{person.message}</p>
                 </div>
               </div>
             ))}

@@ -30,7 +30,7 @@ const Milestones = () => {
   return (
 
 
-      <div className="relative w-4/5 h-screen overflow-hidden bg-white">
+      <div className="relative w-screen h-screen overflow-hidden bg-white">
 
         <BackgroundRotator images={backgroundImages} interval={9000} opacity={0.8} />
 
@@ -44,7 +44,7 @@ const Milestones = () => {
             Company Milestones
           </motion.h1>
 
-          <div className="space-y-6 max-w-3xl">
+          <div className="space-y-6 max-w-4xl">
             {milestones.map((item, index) => (
               <motion.div
                 key={index}
@@ -53,15 +53,15 @@ const Milestones = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                <h2 className="text-4xl font-bold text-gray-950">
+                <h2 className="text-5xl font-bold text-gray-950">
                   {item.title}
                 </h2>
-                <p className="text-2xl text-gray-900 font-semibold">{item.description}</p>
-                <p className="text-sm mt-2 text-gray-800">
+                <p className="text-4xl text-gray-900 font-semibold">{item.description}</p>
+                <p className="text-sm mt-2 text-gray-950"> 
                   {new Date(item.date).toLocaleDateString("en-KE", {
                     year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
+                    //month: 'long',
+                    //day: 'numeric',
                   })}
                 </p>
               </motion.div>

@@ -113,7 +113,7 @@ function SlideRotator() {
       activeSlides.push(<TechTipSlide key="techTips" />);
     }
 
-    //activeSlides.push(<MDMessageSlide key="md-message" />);
+    activeSlides.push(<MDMessageSlide key="md-message" />); //This one should be commented until message is received
     activeSlides.push(<MotivationalQuoteSlide key="quote" />);
     activeSlides.push(<HRPolicySlide key="hr" />);
 
