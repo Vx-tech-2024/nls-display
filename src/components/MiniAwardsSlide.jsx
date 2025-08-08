@@ -32,7 +32,7 @@ function MiniAwardsSlide() {
                     {awardsToShow.map((award, idx) => (
                         <div
                         key={idx}
-                        className="bg-yellow-50 border border-yellow-300 rounded-2xl p-8 max-w-2xl mx-auto shadow-lg"
+                        className="bg-yellow-50 border border-yellow-300 rounded-2xl p-8 max-w-2xl mx-auto shadow-lg "
                         >
                             <p className="text-4xl font-bold text-yellow-800">{award.title}</p>
                             <p className="text-3xl font-semibold text-gray-600">{award.recipient}</p>

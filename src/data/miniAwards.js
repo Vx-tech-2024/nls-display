@@ -8,8 +8,8 @@ const miniAwards = [
     },
     {
         title: "Best Attendance Streak",
-        recipient: "Victor Oyando",
-        department: "Customer Support",
+        recipient: "Emmah Gathomi",
+        department: "NLS Intern",
         reason: "For the best attendance streak.",
         awardDate: "2025-08-05"
     }
